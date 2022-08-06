@@ -2,6 +2,7 @@
   --primary-color: #fff;
   --primary-background:  rgb(0, 0, 0, .7);
   --primary-red: rgb(222, 0, 0);
+  --primary-container-border: 1px solid rgba(192, 192, 192, 0.3);
 }
 
 * {
@@ -20,7 +21,7 @@ body {
  background: url(/images/pizza-heavenly-slice-main-background.jpg);
  background-position: center;
  background-size: cover;
- height: 100vh;
+ height: auto;
 }
 
 /* header */
@@ -32,6 +33,7 @@ body {
   gap: 20px;
   height: 200px;
   background: var(--primary-background);
+  border-bottom: var(--primary-container-border);
 }
 
 .restaurant-name {
@@ -59,4 +61,31 @@ body {
   cursor: pointer;
   transform: translateY(-5px);
   transition: .4s;
+}
+
+/* Main content */
+.main-content {
+  color: var(--primary-color);
+  background: var(--primary-background);
+  margin: 65px auto;
+  max-width: 700px;
+  border: var(--primary-container-border);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-size: 1.7rem;
+  padding: 30px;
+}
+
+.chef-img {
+  border-radius: 50%;
+  height: 325px;
+  width: 320px;
+  opacity: 90%;
+  object-fit: cover;
 }
