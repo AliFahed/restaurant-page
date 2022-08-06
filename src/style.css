@@ -89,3 +89,26 @@ body {
   opacity: 90%;
   object-fit: cover;
 }
+
+/* footer*/
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-background);
+  border-top: var(--primary-container-border);
+  height: 80px;
+}
+
+.footer-info {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+}
+
+.footer-info > a {
+  color: var(--primary-color);
+}
+
+.footer-info > a:hover {
+  color: rgb(189, 179, 179);
+}
