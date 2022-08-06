@@ -1,3 +1,9 @@
+:root {
+  --primary-color: #fff;
+  --primary-background:  rgb(0, 0, 0, .7);
+  --primary-red: rgb(222, 0, 0);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -8,4 +14,49 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   line-height: 1.5;
+}
+
+.content {
+ background: url(/images/pizza-heavenly-slice-main-background.jpg);
+ background-position: center;
+ background-size: cover;
+ height: 100vh;
+}
+
+/* header */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 200px;
+  background: var(--primary-background);
+}
+
+.restaurant-name {
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+
+.header-keyword-hot {
+  color: var(--primary-red);
+}
+
+.navbar-ul {
+  list-style-type: none;
+  display: flex;
+  gap: 22px;
+}
+
+.navbar-links > a {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.navbar-links:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  transition: .4s;
 }
