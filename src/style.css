@@ -90,6 +90,14 @@ body {
   object-fit: cover;
 }
 
+.credit-photo-creator {
+  font-size: 1.1rem;
+}
+
+.credit-photo-creator > a {
+  color: var(--primary-color);
+}
+
 /* footer*/
 .footer {
   display: flex;
