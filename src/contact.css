@@ -16,3 +16,8 @@
 .contact-icon {
   width: 50px;
 }
+
+.location-on-map {
+  display: flex;
+  justify-content: center;
+}
