@@ -1,5 +1,9 @@
 import createHomePageElements from "./index.js";
 import './menu.css';
+import pizza1 from '/images/Arugula-and-burratta-pizza-image.jpg';
+import pizza2 from '/images/Pepperoni-pizza-image.jpg';
+import pizza3 from '/images/Tomato-and-basil-pizza-image.jpg';
+import pizza4 from '/images/Hawaiian-chicken-pizzasmoked-image.jpg';
 
 const createMenuPageEelements = () => {
   const pageContent = document.querySelector('.content');
@@ -18,7 +22,7 @@ const createMenuPageEelements = () => {
 
   const pizza_img1 = document.createElement('img');
   pizza_img1.classList.add('pizza-image');
-  pizza_img1.src = '/images/Arugula-and-burratta-pizza-image.jpg';
+  pizza_img1.src = pizza1;
   pizza_img1.alt = 'Arugula and burratta pizza Image';
   menu_itmes1.appendChild(pizza_img1);
 
@@ -48,7 +52,7 @@ const createMenuPageEelements = () => {
   
   const pizza_img2 = document.createElement('img');
   pizza_img2.classList.add('pizza-image');
-  pizza_img2.src = '/images/Pepperoni-pizza-image.jpg';
+  pizza_img2.src = pizza2;
   pizza_img2.alt = 'Pepperoni Pizza Image';
   menu_itmes2.appendChild(pizza_img2);
 
@@ -78,7 +82,7 @@ const createMenuPageEelements = () => {
   
   const pizza_img3 = document.createElement('img');
   pizza_img3.classList.add('pizza-image');
-  pizza_img3.src = '/images/Tomato-and-basil-pizza-image.jpg';
+  pizza_img3.src = pizza3;
   pizza_img3.alt = 'Pizza with Tomato and Basil Image';
   menu_itmes3.appendChild(pizza_img3);
 
@@ -108,7 +112,7 @@ const createMenuPageEelements = () => {
 
   const pizza_img4 = document.createElement('img');
   pizza_img4.classList.add('pizza-image');
-  pizza_img4.src = '/images/Hawaiian-chicken-pizzasmoked-image.jpg';
+  pizza_img4.src = pizza4;
   pizza_img4.alt = 'Hawaiian Chicken PizzaSmoked Image';
   menu_itmes4.appendChild(pizza_img4);
 
