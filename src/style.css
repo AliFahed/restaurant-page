@@ -21,6 +21,7 @@ body {
  background: url(/images/pizza-heavenly-slice-main-background.jpg);
  background-position: center;
  background-size: cover;
+ background-attachment: fixed;
  height: auto;
 }
 
