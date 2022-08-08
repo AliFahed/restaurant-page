@@ -54,8 +54,14 @@ const createContactPageEelements = () => {
   location_on_map.appendChild(map);
 };
 
+const currentPage = () => {
+  const activePage = document.querySelector('.contact');
+  activePage.classList.add('activePage');
+};
+
 const loadContactPage = () => {
   createHomePageElements.createPageHeader();
+  currentPage();
   createContactPageEelements();
   createHomePageElements.createPageFooter();
 };

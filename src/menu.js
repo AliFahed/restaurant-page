@@ -132,8 +132,14 @@ const createMenuPageEelements = () => {
   credit_photo_creator4.appendChild(credit_photo_creator4_link);
 };
 
+const currentPage = () => {
+  const activePage = document.querySelector('.menu');
+  activePage.classList.add('activePage');
+};
+
 const loadMenuPage = () => {
   createHomePageElements.createPageHeader();
+  currentPage();
   createMenuPageEelements();
   createHomePageElements.createPageFooter();
 };
