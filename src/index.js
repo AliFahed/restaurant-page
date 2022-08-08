@@ -1,3 +1,6 @@
+import loadMenuPage from "./menu.js";
+import loadContactPage from "./contact.js";
+
 const createHomePageElements = (() => {
   const createPageHeader = () => {
     const pageContent = document.querySelector('.content');
@@ -24,19 +27,28 @@ const createHomePageElements = (() => {
     const li_home = document.createElement('li');
     li_home.classList.add('navbar-links');
     const li_home_link = document.createElement('a');
-    li_home_link.href = '/dist/index.html';
+    li_home_link.addEventListener('click', () => {
+      wipePageElements();
+      loadHomePage();
+    });
     li_home_link.textContent = 'Home';
 
     const li_menu = document.createElement('li');
     li_menu.classList.add('navbar-links');
     const li_menu_link = document.createElement('a');
-    li_menu_link.href = '/dist/menu.html';
+    li_menu_link.addEventListener('click', () => {
+      wipePageElements();
+      loadMenuPage();
+    });
     li_menu_link.textContent = 'Menu';
     
     const li_contact = document.createElement('li');
     li_contact.classList.add('navbar-links');
     const li_contact_link = document.createElement('a');
-    li_contact_link.href = '/dist/contact.html';
+    li_contact_link.addEventListener('click', () => {
+      wipePageElements();
+      loadContactPage();
+    });
     li_contact_link.textContent = 'Contact';
 
     header.appendChild(nav);
@@ -120,6 +132,23 @@ const createHomePageElements = (() => {
   return { createPageHeader, createPageMainSection, createPageFooter };
 })();
 
-createHomePageElements.createPageHeader();
-createHomePageElements.createPageMainSection();
-createHomePageElements.createPageFooter();
+const loadHomePage = () => {
+  createHomePageElements.createPageHeader();
+  createHomePageElements.createPageMainSection();
+  createHomePageElements.createPageFooter();
+};
+
+loadHomePage();
+
+const wipePageElements = () => {
+  const pageElements = document.querySelector('.content');
+  const pageHeader = document.querySelector('header');
+  const pageMain = document.querySelector('main');
+  const pageFooter = document.querySelector('footer');
+  
+  pageElements.removeChild(pageHeader);
+  pageElements.removeChild(pageMain);
+  pageElements.removeChild(pageFooter);
+};
+
+export default createHomePageElements;
