@@ -48,8 +48,59 @@ const createHomePageElements = (() => {
     li_menu.appendChild(li_menu_link);
     li_contact.appendChild(li_contact_link);
   };
+
+  const createPageMainSection = () => {
+    const pageContent = document.querySelector('.content');
+
+    const main = document.createElement('main');
+    main.classList.add('main-content');
+    pageContent.appendChild(main);
+
+    const container = document.createElement('div');
+    container.classList.add('container');
+    main.appendChild(container);
+
+    const restaurant_info1 = document.createElement('p');
+    restaurant_info1.textContent = 'Best pizza in Italy';
+    container.appendChild(restaurant_info1);
+
+    const restaurant_info2 = document.createElement('p');
+    restaurant_info2.textContent = 'Since 1856';
+    container.appendChild(restaurant_info2);
+
+    const restaurant_info_image = document.createElement('img');
+    restaurant_info_image.classList.add('chef-img');
+    restaurant_info_image.src = '/images/Pizza-Chef-image.jpg';
+    restaurant_info_image.alt = 'Chef Preparing Pizza'
+    container.appendChild(restaurant_info_image);
+    
+    const restaurant_info3 = document.createElement('p');
+    restaurant_info3.textContent = 'Order Now!';
+    container.appendChild(restaurant_info3);
+
+    const credit_photo_creator1 = document.createElement('p');
+    credit_photo_creator1.classList.add('credit-photo-creator');
+    credit_photo_creator1.textContent = 'Photo by';
+    container.appendChild(credit_photo_creator1);
+
+    const credit_photo_creator_link1 = document.createElement('a');
+    credit_photo_creator_link1.href = 'https://unsplash.com/@hojastudio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText';
+    credit_photo_creator_link1.textContent = 'Hoja Studio';
+    credit_photo_creator1.appendChild(credit_photo_creator_link1);
+
+    const credit_photo_creator2 = document.createElement('p');
+    credit_photo_creator2.classList.add('credit-photo-creator');
+    credit_photo_creator2.textContent = 'Background photo by';
+    container.appendChild(credit_photo_creator2);
+
+    const credit_photo_creator_link2 = document.createElement('a');
+    credit_photo_creator_link2.href = 'https://unsplash.com/@iavnt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText';
+    credit_photo_creator_link2.textContent = 'Ivan Torres';
+    credit_photo_creator2.appendChild(credit_photo_creator_link2);
+  };
   
-  return { createPageHeader };
+  return { createPageHeader, createPageMainSection };
 })();
 
 createHomePageElements.createPageHeader();
+createHomePageElements.createPageMainSection();
