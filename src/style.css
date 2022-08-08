@@ -24,6 +24,11 @@ body {
  height: auto;
 }
 
+.activePage {
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 8px;
+}
+
 /* header */
 .header {
   display: flex;
