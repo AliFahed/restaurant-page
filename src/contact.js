@@ -1,5 +1,7 @@
 import createHomePageElements from "./index.js";
 import './contact.css';
+import phoneIcon from '/images/phone-icon.svg';
+import locationIcon from '/images/location-icon.svg';
 
 const createContactPageEelements = () => {
   const pageContent = document.querySelector('.content');
@@ -18,7 +20,7 @@ const createContactPageEelements = () => {
 
   const phone = document.createElement('img');
   phone.classList.add('contact-icon');
-  phone.src = '/images/phone-icon.svg';
+  phone.src = phoneIcon;
   phone.alt = 'phone-icon';
   contact_info1.appendChild(phone);
 
@@ -32,7 +34,7 @@ const createContactPageEelements = () => {
 
   const location = document.createElement('img');
   location.classList.add('contact-icon');
-  location.src = '/images/location-icon.svg';
+  location.src = locationIcon;
   location.alt = 'location-icon';
   contact_info2.appendChild(location);
 
