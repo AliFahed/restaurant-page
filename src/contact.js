@@ -1,4 +1,5 @@
 import createHomePageElements from "./index.js";
+import './contact.css';
 
 const createContactPageEelements = () => {
   const pageContent = document.querySelector('.content');

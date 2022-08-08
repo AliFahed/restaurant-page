@@ -1,4 +1,5 @@
 import createHomePageElements from "./index.js";
+import './menu.css';
 
 const createMenuPageEelements = () => {
   const pageContent = document.querySelector('.content');
