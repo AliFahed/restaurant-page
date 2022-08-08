@@ -25,7 +25,7 @@ const createHomePageElements = (() => {
     ul.classList.add('navbar-ul');
 
     const li_home = document.createElement('li');
-    li_home.classList.add('navbar-links');
+    li_home.classList.add('navbar-links', 'home');
     const li_home_link = document.createElement('a');
     li_home_link.addEventListener('click', () => {
       wipePageElements();
@@ -34,7 +34,7 @@ const createHomePageElements = (() => {
     li_home_link.textContent = 'Home';
 
     const li_menu = document.createElement('li');
-    li_menu.classList.add('navbar-links');
+    li_menu.classList.add('navbar-links', 'menu');
     const li_menu_link = document.createElement('a');
     li_menu_link.addEventListener('click', () => {
       wipePageElements();
@@ -43,7 +43,7 @@ const createHomePageElements = (() => {
     li_menu_link.textContent = 'Menu';
     
     const li_contact = document.createElement('li');
-    li_contact.classList.add('navbar-links');
+    li_contact.classList.add('navbar-links', 'contact');
     const li_contact_link = document.createElement('a');
     li_contact_link.addEventListener('click', () => {
       wipePageElements();
@@ -132,8 +132,14 @@ const createHomePageElements = (() => {
   return { createPageHeader, createPageMainSection, createPageFooter };
 })();
 
+const currentPage = () => {
+  const activePage = document.querySelector('.home');
+  activePage.classList.add('activePage');
+};
+
 const loadHomePage = () => {
   createHomePageElements.createPageHeader();
+  currentPage();
   createHomePageElements.createPageMainSection();
   createHomePageElements.createPageFooter();
 };
