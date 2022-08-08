@@ -80,7 +80,7 @@ const createHomePageElements = (() => {
 
     const credit_photo_creator1 = document.createElement('p');
     credit_photo_creator1.classList.add('credit-photo-creator');
-    credit_photo_creator1.textContent = 'Photo by';
+    credit_photo_creator1.textContent = 'Photo by ';
     container.appendChild(credit_photo_creator1);
 
     const credit_photo_creator_link1 = document.createElement('a');
@@ -90,7 +90,7 @@ const createHomePageElements = (() => {
 
     const credit_photo_creator2 = document.createElement('p');
     credit_photo_creator2.classList.add('credit-photo-creator');
-    credit_photo_creator2.textContent = 'Background photo by';
+    credit_photo_creator2.textContent = 'Background photo by ';
     container.appendChild(credit_photo_creator2);
 
     const credit_photo_creator_link2 = document.createElement('a');
@@ -98,9 +98,28 @@ const createHomePageElements = (() => {
     credit_photo_creator_link2.textContent = 'Ivan Torres';
     credit_photo_creator2.appendChild(credit_photo_creator_link2);
   };
+
+  const createPageFooter = () => {
+    const pageContent = document.querySelector('.content');
+
+    const footer = document.createElement('footer');
+    footer.classList.add('footer');
+    pageContent.appendChild(footer);
+
+    const footer_info = document.createElement('p');
+    footer_info.classList.add('footer-info');
+    footer_info.textContent = 'Made by ';
+    footer.appendChild(footer_info);
+
+    const footer_info_link = document.createElement('a');
+    footer_info_link.href = 'https://github.com/AliFahed/restaurant-page';
+    footer_info_link.textContent = 'AliFahed';
+    footer_info.appendChild(footer_info_link);
+  };
   
-  return { createPageHeader, createPageMainSection };
+  return { createPageHeader, createPageMainSection, createPageFooter };
 })();
 
 createHomePageElements.createPageHeader();
 createHomePageElements.createPageMainSection();
+createHomePageElements.createPageFooter();
