@@ -1,6 +1,7 @@
 import loadMenuPage from "./menu.js";
 import loadContactPage from "./contact.js";
 import './style.css';
+import pizzaChef from '/images/Pizza-Chef-image.jpg';
 
 const createHomePageElements = (() => {
   const createPageHeader = () => {
@@ -83,7 +84,7 @@ const createHomePageElements = (() => {
 
     const restaurant_info_image = document.createElement('img');
     restaurant_info_image.classList.add('chef-img');
-    restaurant_info_image.src = '/images/Pizza-Chef-image.jpg';
+    restaurant_info_image.src = pizzaChef;
     restaurant_info_image.alt = 'Chef Preparing Pizza'
     container.appendChild(restaurant_info_image);
     
